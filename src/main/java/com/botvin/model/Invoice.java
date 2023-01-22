@@ -8,11 +8,15 @@ import java.util.Objects;
 
 @Setter
 @Getter
-public abstract class Invoice {
+public class Invoice {
 
     private List<Objects> objectsList; // список товарів (Telephone/Television)
     private Customer customer;
     private InvoiceType invoiceType;
+
+    public Invoice() {
+
+    }
 
     public Invoice(List<Objects> objectsList, Customer customer, InvoiceType invoiceType) {
         this.objectsList = objectsList;

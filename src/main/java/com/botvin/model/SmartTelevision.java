@@ -11,10 +11,10 @@ public class SmartTelevision extends Television {
     private String model;
 
     public SmartTelevision() {
-
+        setDeviceType(DeviceType.TELEVISION);
     }
 
-    public SmartTelevision(final DeviceType deviceType, String series, String model, double diagonal, String screenType, String country, double price) {
+    public SmartTelevision(final DeviceType deviceType, String series, String model, int diagonal, String screenType, String country, int price) {
         super(series, diagonal, screenType, country, price);
         this.deviceType = deviceType;
         this.model = model;
@@ -22,7 +22,7 @@ public class SmartTelevision extends Television {
 
     @Override
     public String toString() {
-        return String.format("Type: %s, Model: %s, Series: %s, Diagonal: %f, Screen type: %s, Country: %s, Price: %d"
+        return String.format("Type: %s, Model: %s, Series: %s, Diagonal: %d, Screen type: %s, Country: %s, Price: %d"
                 , getDeviceType(), getModel(), getSeries(), getDiagonal(), getScreenType(), getCountry(), getPrice());
     }
 

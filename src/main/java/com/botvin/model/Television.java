@@ -8,12 +8,16 @@ import lombok.Setter;
 public class Television {
 
     private String series;
-    private double diagonal;
+    private int diagonal;
     private String screenType;
     private String country;
-    private double price;
+    private int price;
 
-    public Television(String series, double diagonal, String screenType, String country, double price) {
+    public Television() {
+
+    }
+
+    public Television(String series, int diagonal, String screenType, String country, int price) {
         this.series = series;
         this.diagonal = diagonal;
         this.screenType = screenType;

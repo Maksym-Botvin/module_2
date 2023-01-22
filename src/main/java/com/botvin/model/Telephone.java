@@ -10,9 +10,13 @@ public class Telephone {
     private String series;
     private String model;
     private String screenType;
-    private double price;
+    private int price;
 
-    public Telephone(String series, String model, String screenType, double price) {
+    public Telephone() {
+
+    }
+
+    public Telephone(String series, String model, String screenType, int price) {
         this.series = series;
         this.model = model;
         this.screenType = screenType;

@@ -15,7 +15,23 @@ public class Main {
         LinkedList linkedList = shopService.readCsvCreateList("D:\\Java\\Module_2\\Onl3\\src\\main\\resources\\csv\\data.csv");
         linkedList.forEach(System.out::println);
 
-        System.out.println("~".repeat(20));
+        System.out.println("~".repeat(100));
+
+        LinkedList listOfTelephones = shopService.listOfTelephones(linkedList);
+        //System.out.println(listOfTelephones.get(0));
+        listOfTelephones.forEach(System.out::println);
+
+        System.out.println();
+
+        LinkedList listOfTelevisions = shopService.listOfTelevisions(linkedList);
+        //System.out.println(listOfTelevisions.get(0));
+        listOfTelevisions.forEach(System.out::println);
+
+        shopService.createOrder(listOfTelephones, listOfTelevisions, 5);
+
+        //shopService.test(listOfTelephones, listOfTelevisions);
+
+
 
 
 
